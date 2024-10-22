@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "pantheon_play",
+    "name": "Pantheon Play",
     "slug": "pantheon_play",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "pantheon_play",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
