@@ -9,12 +9,17 @@ import EmptyState from '../../components/EmptyState'
 import { getAllPosts, getLatestPosts } from '../../lib/appwrite'
 import useAppWrite from '../../lib/useAppwrite'
 import VideoCard from '../../components/VideoCard'
+import { useGlobalContext } from '../../context/GLobalProvider'
+
 
 const Home = () => {
   // use custom hook to get data(remaned as post) using getAllPosts
   const {data: posts,refetch}=useAppWrite(getAllPosts);
 
   const {data: latestPosts}=useAppWrite(getLatestPosts);
+
+  const { user, setUser, setIsLoggedIn } = useGlobalContext()
+
 
 
    const [refreshing, setRefreshing] = useState(false)
@@ -45,10 +50,10 @@ const Home = () => {
             <View className='justify-between items-start flex-row mb-6'>
               <View>
                 <Text className='font-pmedium text-sm text-gray-100'>
-                  Welcome Back
+                  Welcome Back,
                 </Text>
                 <Text className='text-2xl font-psemibold text-white'>
-                  Insert Name
+                  {user?.username}
                 </Text>
               </View>
 
