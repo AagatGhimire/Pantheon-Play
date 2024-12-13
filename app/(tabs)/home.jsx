@@ -18,7 +18,7 @@ const Home = () => {
 
   const {data: latestPosts}=useAppWrite(getLatestPosts);
 
-  const { user, setUser, setIsLoggedIn } = useGlobalContext()
+  const { user } = useGlobalContext()
 
 
 
